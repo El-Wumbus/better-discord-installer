@@ -19,9 +19,9 @@ sudo chmod u+x ./bdi.sh
 * using wget
 
 ```shell
-wget https://github.com/El-Wumbus/Better-Discord-Installer/archive/refs/tags/v1.0.0.zip
-unzip ./v1.0.0.zip
-cd ./Better-Discord-Installer-1.0.0
+wget https://github.com/El-Wumbus/Better-Discord-Installer/archive/refs/tags/v1.0.1.zip
+unzip ./v1.0.1.zip
+cd ./Better-Discord-Installer-1.0.1
 sudo chmod u+x ./bdi.sh
 ./bdi.sh
 ```
