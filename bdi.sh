@@ -9,20 +9,27 @@ printf "Flatpak [fltpk]\n"
 
 read -rp "enter a selection, for defualt, enter nothing: " selection
 
+function dInstall {
 curl -O https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl
 sudo chmod +x ./betterdiscordctl
 sudo mv ./betterdiscordctl /usr/local/bin
-
+}
+bdc="betterdiscordctl"
 if [ "${selection}" == "" ]; then
-  betterdiscordctl install
+  dInstall
+  ${bdc} install
 elif [ "${selection}" == "ptb" ]; then
-  betterdiscordctl --flavor PTB install
+  dInstall
+  ${bdc} --flavor PTB install
 elif [ "${selection}" == "canary" ]; then
-  betterdiscordctl --flavor Canary install
+  dInstall
+  ${bdc} --flavor Canary install
 elif [ "${selection}" == "snap" ]; then
-  betterdiscordctl --d-install snap 
+  dInstall
+  ${bdc} --d-install snap 
 elif [ "${selection}" == "fltpk" ]; then
-  betterdiscordctl --d-install flatpak install
+  dInstall
+  ${bdc} --d-install flatpak install
 else
-  printf "improper input"
+  printf "improper input, cannot continue"
 fi
