@@ -1,7 +1,7 @@
 Better-Discord-Installer
 ========================
 
-*Requires `bash`, `curl`, `sudo`*
+*Requires `bash`, `curl`*
 
 A Simple, quick install script.
 
