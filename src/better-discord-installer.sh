@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 install_betterdiscordctl() {
   bindir="/opt/betterdiscordctl/bin"
-  sudo mkdir -P ${bindir} || return 1                                                                                    # Make the bindir else return failure
+  sudo mkdir -p ${bindir} || return 1                                                                                    # Make the bindir else return failure
   curl https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl -o "${bindir}/betterdiscordctl" # Download the executable to bindir
   sudo chmod +x "${bindir}"/betterdiscordctl                                                                             # ensure the executable has executable permissions
 
@@ -28,7 +28,7 @@ if [ "${1}" = "list-types" ]; then
   echo "canary"
   echo "snap"
   echo "flatpak"
-elif [ "${1}" -eq "" ]; then
+elif [ "${1}" = "" ]; then
   if [ "${1}" = "stable" ]; then discord=true; fi
   if [ "${1}" = "canary" ]; then discord_canary=true; fi
   if [ "${1}" = "ptb" ]; then discord_ptb=true; fi
